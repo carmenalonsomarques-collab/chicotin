@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicotín — Comida casera para llevar · Piedras Blancas</title>
+  <meta name="description"
+    content="Comida casera para llevar en Piedras Blancas, Asturias. Menú del día, hamburguesas, bocadillos y especialidades. Llámanos: 984 18 29 32">
+  <meta property="og:title" content="Chicotín — Comida casera para llevar">
+  <meta property="og:description" content="Comida de casa, para llevar. Piedras Blancas, Asturias.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" aria-label="Chicotín">
+        <svg class="nav__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
+          <circle cx="8"   cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+          <circle cx="102" cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+          <circle cx="55"  cy="45" r="40" fill="#C0392B" stroke="#111" stroke-width="4"/>
+          <text x="57" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="900" fill="#111">C</text>
+        </svg>
+        <span class="nav__logo-text">hicotin</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#menu-dia">Menú del día</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="tel:984182932" class="nav__phone">984 18 29 32</a>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer">
+    <button class="drawer__close" id="drawerClose" aria-label="Cerrar menú">✕</button>
+    <ul class="drawer__links">
+      <li><a href="#menu-dia">Menú del día</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="tel:984182932" class="drawer__phone">984 18 29 32</a>
+  </aside>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Piedras Blancas, Asturias</p>
+        <h1 class="hero__title">
+          Comida de casa.<br><em>Para llevar.</em>
+        </h1>
+        <p class="hero__body">
+          Sin alimentos del futuro ni raciones de diseño.<br>
+          Solo lo de siempre, hecho con ganas.
+        </p>
+        <div class="hero__ctas">
+          <a href="#menu-dia" class="btn btn--fill">Ver el menú de hoy</a>
+          <a href="tel:984182932" class="btn btn--ghost">Llamar para pedir</a>
+        </div>
+      </div>
+      <aside class="hero__badge">
+        <span class="badge__stars" aria-hidden="true">★★★★★</span>
+        <strong class="badge__score">4.7</strong>
+        <span class="badge__label">267 valoraciones en Google</span>
+      </aside>
+    </section>
+
+    <!-- ============================================================
+         MENÚ DEL DÍA
+    ============================================================ -->
+    <section class="menudia" id="menu-dia">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">Se actualiza cada día</span>
+          <h2>Menú de hoy</h2>
+          <p>Lo publicamos cada mañana en nuestra página de Facebook.</p>
+        </header>
+
+        <div class="menudia__body">
+
+          <div class="menudia__feed fade-up">
+            <div id="fb-root"></div>
+            <div class="fb-page"
+              data-href="https://www.facebook.com/Chicotincomidaparallevar/"
+              data-tabs="timeline"
+              data-width="600"
+              data-small-header="true"
+              data-adapt-container-width="true"
+              data-hide-cover="true"
+              data-show-facepile="false">
+              <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
+                <p>Lo publicamos cada mañana en nuestra página de Facebook.</p>
+                <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">
+                  Ver el menú de hoy →
+                </a>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="menudia__aside fade-up">
+            <div class="menudia__card">
+              <p class="menudia__card-label">¿Ya tienes claro qué quieres?</p>
+              <p class="menudia__card-body">Llámanos y lo dejamos listo para ti. Sin esperas raras, sin apps que se
+                cuelgan.</p>
+              <a href="tel:984182932" class="btn btn--fill btn--block">984 18 29 32</a>
+              <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener"
+                class="menudia__fb-link">
+                Ver en Facebook →
+              </a>
+            </div>
+
+            <div class="menudia__hours">
+              <p class="menudia__hours-label">Hoy abrimos</p>
+              <p class="menudia__hours-today" id="hoursToday">Consultando horario…</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider__line"></span>
+      <svg class="divider__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
+        <circle cx="8"   cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="102" cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="55"  cy="45" r="40" fill="#C0392B" stroke="#111" stroke-width="4"/>
+        <text x="57" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="900" fill="#111">C</text>
+      </svg>
+      <span class="divider__line"></span>
+    </div>
+
+    <!-- ============================================================
+         CARTA
+    ============================================================ -->
+    <section class="carta" id="carta">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">Siempre disponible</span>
+          <h2>Nuestra carta</h2>
+        </header>
+
+        <nav class="carta__tabs fade-up" aria-label="Categorías de la carta">
+          <button class="carta__tab is-active" data-panel="hamburguesas">Hamburguesas</button>
+          <button class="carta__tab" data-panel="bocadillos">Bocadillos</button>
+          <button class="carta__tab" data-panel="sandwiches">Sándwiches</button>
+          <button class="carta__tab" data-panel="especialidades">Especialidades</button>
+          <button class="carta__tab" data-panel="postres">Postres</button>
+          <button class="carta__tab" data-panel="bebidas">Bebidas</button>
+          <button class="carta__tab" data-panel="menu-dia-precios">Menú del día</button>
+        </nav>
+
+        <!-- HAMBURGUESAS -->
+        <div class="carta__panel is-active" id="panel-hamburguesas">
+          <p class="carta__aviso">Todas nuestras hamburguesas van acompañadas de patatas</p>
+          <ul class="carta__lista">
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Pollo</h3>
+                <p>Pollo crujiente, queso, lechuga, cebolla caramelizada y mayonesa</p>
+              </div>
+              <span class="carta__precio">9,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Bacon y Queso</h3>
+                <p>Carne de vacuno, bacon y queso cheddar</p>
+              </div>
+              <span class="carta__precio">10€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Barbacoa</h3>
+                <p>Carne de vacuno, queso cheddar, bacon, lechuga, cebolla caramelizada y salsa BBQ</p>
+              </div>
+              <span class="carta__precio">10,20€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Picante</h3>
+                <p>Carne de vacuno, queso cheddar, bacon, cebolla cruda, lechuga y jalapeños</p>
+              </div>
+              <span class="carta__precio">10,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Queso de Cabra</h3>
+                <p>Carne de vacuno, queso de cabra, bacon y mermelada de tomate</p>
+              </div>
+              <span class="carta__precio">11,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Chicotín</h3>
+                <p>Carne de vacuno, bacon, queso cheddar, pepinillo, lechuga, cebolla caramelizada y tomate</p>
+              </div>
+              <span class="carta__precio">10,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Chicotín Animal</h3>
+                <p>La Chicotín, pero doble</p>
+              </div>
+              <span class="carta__precio">13,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Vegana</h3>
+                <p>Hamburguesa casera de garbanzos, tomate, calabacín, cebolla, lechuga y queso vegano</p>
+              </div>
+              <span class="carta__precio">10,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Vacuno</h3>
+                <p>Solo carne de vacuno</p>
+              </div>
+              <span class="carta__precio">9,50€</span>
+            </li>
+          </ul>
+          <div class="carta__extras">
+            <p class="carta__extras-label">Extras</p>
+            <div class="carta__extras-fila">
+              <span>Queso <strong>1€</strong></span>
+              <span>Bacon <strong>1€</strong></span>
+              <span>Huevo frito <strong>1,50€</strong></span>
+              <span>Cebolla caramelizada <strong>0,80€</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOCADILLOS -->
+        <div class="carta__panel" id="panel-bocadillos">
+          <ul class="carta__lista">
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Pollo</h3>
+                <p>Pollo a la plancha, lechuga, tomate y mayonesa</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Pollo y Pimientos</h3>
+                <p>Pollo a la plancha y pimientos del piquillo</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Lomo</h3>
+                <p>Lomo adobado a la plancha, queso y salsa Chicotín</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Lomo y Pimientos</h3>
+                <p>Lomo adobado a la plancha con pimientos del piquillo</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Bacon y Queso</h3>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Carne Guisada</h3>
+              </div>
+              <span class="carta__precio">9€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Chicotín</h3>
+                <p>Chuleta de cerdo crujiente, queso, bacon, cebolla caramelizada, rúcula y salsa Chicotín</p>
+              </div>
+              <span class="carta__precio">8€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Escalopines de Jamón de Cerdo</h3>
+                <p>Escalopines + una salsa a elegir</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Escalopines de Pollo</h3>
+                <p>Escalopines + una salsa a elegir</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SÁNDWICHES -->
+        <div class="carta__panel" id="panel-sandwiches">
+          <ul class="carta__lista">
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Mixto</h3>
+                <p>Jamón york y queso</p>
+              </div>
+              <span class="carta__precio">4€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Vegetal</h3>
+                <p>2 pisos — 1º: jamón york y queso · 2º: LTC, huevo cocido, zanahoria y mayonesa</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Pollo</h3>
+                <p>Pollo al horno, lechuga, huevo cocido y mayonesa</p>
+              </div>
+              <span class="carta__precio">7,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Atún</h3>
+                <p>Atún, mayonesa, lechuga, huevo cocido y zanahoria</p>
+              </div>
+              <span class="carta__precio">7,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Chicotín</h3>
+                <p>2 pisos — jamón york, queso, bechamel y huevo frito</p>
+              </div>
+              <span class="carta__precio">8€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ESPECIALIDADES -->
+        <div class="carta__panel" id="panel-especialidades">
+          <ul class="carta__lista">
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Ensalada Chicotín</h3>
+                <p>Lechuga, aceitunas, nueces, queso de cabra, pollo y uvas pasas</p>
+              </div>
+              <span class="carta__precio">10€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Ensalada Mixta</h3>
+              </div>
+              <span class="carta__precio">7,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Ensalada de Acompañamiento</h3>
+              </div>
+              <span class="carta__precio">3,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Ensaladilla Rusa</h3>
+                <p>Pequeña / Grande</p>
+              </div>
+              <span class="carta__precio">6,50€ / 11,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Callos Chicotín <span class="carta__tag">Temporada</span></h3>
+                <p>Sin patatas / con patatas</p>
+              </div>
+              <span class="carta__precio">9€ / 11€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Lasaña Atún o Carne</h3>
+              </div>
+              <span class="carta__precio">8,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Lasaña de Salmón y Espinacas</h3>
+              </div>
+              <span class="carta__precio">9€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Cachopo de Jamón Ibérico y Queso</h3>
+              </div>
+              <span class="carta__precio">16€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Cachopo de Cecina y Queso de Cabra</h3>
+              </div>
+              <span class="carta__precio">16,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Cachopo Chicotín</h3>
+                <p>Filete de ternera, jamón ibérico, pimientos del piquillo, cebolla caramelizada y queso ahumado</p>
+              </div>
+              <span class="carta__precio">18€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Escalopines con Patatas</h3>
+              </div>
+              <span class="carta__precio">9,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Escalopines de Pollo con Patatas</h3>
+              </div>
+              <span class="carta__precio">10,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Albóndigas</h3>
+                <p>Sin patatas / con patatas</p>
+              </div>
+              <span class="carta__precio">7,50€ / 9,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Carne Guisada</h3>
+                <p>Sin patatas / con patatas</p>
+              </div>
+              <span class="carta__precio">9€ / 11€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Patatas Pequeñas con Salsa</h3>
+              </div>
+              <span class="carta__precio">4,70€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Patatas Grandes con 5 Salsas</h3>
+                <p>Salsa extra 0,30€</p>
+              </div>
+              <span class="carta__precio">7€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Nuggets Caseros</h3>
+              </div>
+              <span class="carta__precio">6,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Croquetas</h3>
+                <p>Jamón ibérico, calamares en su tinta o bacalao</p>
+              </div>
+              <span class="carta__precio">9€</span>
+            </li>
+          </ul>
+          <div class="carta__encargo">
+            <p class="carta__encargo-label">Por encargo — mínimo 2 días de antelación</p>
+            <ul class="carta__lista">
+              <li class="carta__plato">
+                <div class="carta__plato-info">
+                  <h3>Tortilla Grande</h3>
+                </div>
+                <span class="carta__precio">14,50€</span>
+              </li>
+              <li class="carta__plato">
+                <div class="carta__plato-info">
+                  <h3>Empanada Pan</h3>
+                  <p>Atún / Carne</p>
+                </div>
+                <span class="carta__precio">20€ / 26€</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- POSTRES -->
+        <div class="carta__panel" id="panel-postres">
+          <ul class="carta__lista">
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Mousse individual</h3>
+              </div>
+              <span class="carta__precio">2€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Natillas individuales</h3>
+              </div>
+              <span class="carta__precio">2€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Arroz con Leche individual</h3>
+              </div>
+              <span class="carta__precio">2€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Arroz con Leche 500 ml</h3>
+              </div>
+              <span class="carta__precio">7,50€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Arroz con Leche 1 litro</h3>
+              </div>
+              <span class="carta__precio">10,50€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div class="carta__panel" id="panel-bebidas">
+          <ul class="carta__lista">
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Bote</h3>
+                <p>Cola, Cola Zero, Cola Zero/Zero</p>
+              </div>
+              <span class="carta__precio">2€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Botella ½ litro</h3>
+                <p>Cola, Cola Zero, Fanta Naranja</p>
+              </div>
+              <span class="carta__precio">2,30€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Botella 1 litro</h3>
+                <p>Cola y Fanta Naranja</p>
+              </div>
+              <span class="carta__precio">2,90€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Agua</h3>
+                <p>Pequeña / Grande</p>
+              </div>
+              <span class="carta__precio">1,20€ / 1,80€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Nestea / Aquarius</h3>
+              </div>
+              <span class="carta__precio">2,40€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Monster</h3>
+              </div>
+              <span class="carta__precio">3€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Mahou</h3>
+              </div>
+              <span class="carta__precio">1,80€</span>
+            </li>
+            <li class="carta__plato">
+              <div class="carta__plato-info">
+                <h3>Cerveza 1906</h3>
+              </div>
+              <span class="carta__precio">2€</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- MENÚ DEL DÍA — PRECIOS -->
+        <div class="carta__panel" id="panel-menu-dia-precios">
+          <p class="carta__aviso">2 primeros + 2 segundos a elegir, con acompañamiento (patatas fritas, arroz blanco, ensalada o puré) y postre (arroz con leche, natillas, mousse de chocolate o tarrina de frutas). El menú cambia cada día — <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">ver en Facebook</a>.</p>
+          <div class="carta__menu-grid">
+            <div class="carta__menu-col">
+              <h3 class="carta__menu-tipo">Entre semana</h3>
+              <ul class="carta__menu-lista">
+                <li><span>Menú completo</span><strong>12€</strong></li>
+                <li><span>½ menú de 1º</span><strong>7,60€</strong></li>
+                <li><span>½ menú de 2º</span><strong>8,50€</strong></li>
+                <li><span>Menú dos 2ºs</span><strong>14,60€</strong></li>
+                <li><span>Ración de 1º</span><strong>6,50€</strong></li>
+                <li><span>Ración de 2º</span><strong>7,60€</strong></li>
+              </ul>
+            </div>
+            <div class="carta__menu-col">
+              <h3 class="carta__menu-tipo">Fin de semana</h3>
+              <ul class="carta__menu-lista">
+                <li><span>Menú completo</span><strong>18€</strong></li>
+                <li><span>½ menú de 1º</span><strong>11,80€</strong></li>
+                <li><span>½ menú de 2º</span><strong>12,90€</strong></li>
+                <li><span>Menú dos 2ºs</span><strong>20,60€</strong></li>
+                <li><span>Ración de 1º</span><strong>10,10€</strong></li>
+                <li><span>Ración de 2º</span><strong>11,20€</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider__line"></span>
+      <svg class="divider__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
+        <circle cx="8"   cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="102" cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="55"  cy="45" r="40" fill="#C0392B" stroke="#111" stroke-width="4"/>
+        <text x="57" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="900" fill="#111">C</text>
+      </svg>
+      <span class="divider__line"></span>
+    </div>
+
+    <!-- ============================================================
+         NOSOTROS
+    ============================================================ -->
+    <section class="nosotros" id="nosotros">
+      <div class="container">
+        <div class="nosotros__grid">
+
+          <div class="nosotros__text fade-up">
+            <span class="eyebrow eyebrow--light">¿Quiénes somos?</span>
+            <h2>Comida de verdad,<br><em>desde Piedras Blancas</em></h2>
+            <p>Somos Chicotín. Llevamos años dando de comer a la gente de Castrillón, Avilés y alrededores con una
+              filosofía muy sencilla: que la comida esté buena, que no arruine el bolsillo y que llegue caliente.</p>
+            <p>Sin humos, sin carta en inglés, sin raciones de diseño que caben en una cuchara. Comida de toda la vida,
+              hecha con ganas y servida sin tonterías.</p>
+            <p class="nosotros__score"><strong>4.7 ★</strong> según más de 267 personas que no mienten.</p>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESEÑAS
+    ============================================================ -->
+    <section class="reseñas" id="reseñas">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">4,7 · 267 valoraciones en Google</span>
+          <h2>Lo que dice la gente</h2>
+        </header>
+
+        <div class="slider fade-up" id="reseñasSlider">
+          <div class="slider__viewport">
+            <div class="slider__track">
+
+              <div class="slider__slide">
+                <blockquote class="reseña">
+                  <span class="reseña__comillas" aria-hidden="true">"</span>
+                  <p class="reseña__texto">Nunca defrauda. Comida rica, abundante, variada. Atención tanto en el local como por teléfono clara y rápida. Personal muy agradable y eso siempre están a mil por hora. Envíos a domicilio comidas y cenas de 10.</p>
+                  <footer class="reseña__footer">
+                    <span class="reseña__stars" aria-label="5 estrellas">★★★★★</span>
+                    <cite class="reseña__autor">Joanna S.</cite>
+                    <span class="reseña__fuente">Google</span>
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div class="slider__slide">
+                <blockquote class="reseña">
+                  <span class="reseña__comillas" aria-hidden="true">"</span>
+                  <p class="reseña__texto">La chica que me atendió fue muy rápida y amable. Impresionante la manera de coger pedidos por teléfono y gestionar los pedidos que tenía en el local. Buenas raciones y comida rica.</p>
+                  <footer class="reseña__footer">
+                    <span class="reseña__stars" aria-label="5 estrellas">★★★★★</span>
+                    <cite class="reseña__autor">Vanessa D.</cite>
+                    <span class="reseña__fuente">Google · Local Guide</span>
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div class="slider__slide">
+                <blockquote class="reseña">
+                  <span class="reseña__comillas" aria-hidden="true">"</span>
+                  <p class="reseña__texto">Volví por el trato tan agradable y fue todo un acierto. 3 menús en domingo, 12 euros cada uno, con unas raciones tan amplias que me dieron para comer dos veces. La comida, riquísima. La atención, de 10. Muy recomendable.</p>
+                  <footer class="reseña__footer">
+                    <span class="reseña__stars" aria-label="5 estrellas">★★★★★</span>
+                    <cite class="reseña__autor">Hugo L.</cite>
+                    <span class="reseña__fuente">Google · Local Guide</span>
+                  </footer>
+                </blockquote>
+              </div>
+
+              <div class="slider__slide">
+                <blockquote class="reseña">
+                  <span class="reseña__comillas" aria-hidden="true">"</span>
+                  <p class="reseña__texto">Bien en calidad y tamaño, precios razonables considerando ración y calidad. Las hamburguesas vienen acompañadas de patatas fritas. Suelen tener mucha gente por lo que hay que esperar un poco, pero merece la pena.</p>
+                  <footer class="reseña__footer">
+                    <span class="reseña__stars" aria-label="5 estrellas">★★★★★</span>
+                    <cite class="reseña__autor">Alba B.</cite>
+                    <span class="reseña__fuente">Google · Local Guide</span>
+                  </footer>
+                </blockquote>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="slider__controls">
+            <button class="slider__btn slider__btn--prev" aria-label="Reseña anterior">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="slider__dots" role="tablist">
+              <button class="slider__dot is-active" aria-label="Reseña 1"></button>
+              <button class="slider__dot" aria-label="Reseña 2"></button>
+              <button class="slider__dot" aria-label="Reseña 3"></button>
+              <button class="slider__dot" aria-label="Reseña 4"></button>
+            </div>
+            <button class="slider__btn slider__btn--next" aria-label="Reseña siguiente">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider__line"></span>
+      <svg class="divider__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
+        <circle cx="8"   cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="102" cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="55"  cy="45" r="40" fill="#C0392B" stroke="#111" stroke-width="4"/>
+        <text x="57" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="900" fill="#111">C</text>
+      </svg>
+      <span class="divider__line"></span>
+    </div>
+
+    <!-- ============================================================
+         EVENTOS
+    ============================================================ -->
+    <section class="eventos" id="eventos">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">Para grupos y ocasiones especiales</span>
+          <h2>Eventos y celebraciones</h2>
+          <p>Desde la reunión de empresa hasta la cena de Nochebuena. Lo organizamos para que solo tengas que disfrutar.</p>
+        </header>
+
+        <div class="eventos__grid">
+
+          <div class="eventos__texto fade-up">
+            <p>Nos adaptamos a lo que necesites: el número de personas, el menú, el día. Llámanos con antelación, nos lo cuentas, y lo dejamos todo listo.</p>
+            <p>Sin formularios raros ni plataformas de gestión. Solo una llamada y a comer.</p>
+            <a href="tel:984182932" class="btn btn--fill">984 18 29 32 — Llamar para hablar</a>
+          </div>
+
+          <div class="eventos__tipos fade-up">
+            <ul class="eventos__lista">
+              <li>Reuniones de empresa</li>
+              <li>Celebraciones familiares</li>
+              <li>Nochebuena y fechas señaladas</li>
+              <li>Cumpleaños y eventos privados</li>
+            </ul>
+            <div class="eventos__encargo">
+              <p class="eventos__encargo-label">También por encargo <span>(mínimo 2 días de antelación)</span></p>
+              <ul class="eventos__encargo-lista">
+                <li><span>Tortilla Grande</span><strong>14,50€</strong></li>
+                <li><span>Empanada de Atún</span><strong>20€</strong></li>
+                <li><span>Empanada de Carne</span><strong>26€</strong></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true">
+      <span class="divider__line"></span>
+      <svg class="divider__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
+        <circle cx="8"   cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="102" cy="45" r="7"  fill="#C0392B" stroke="#111" stroke-width="2.5"/>
+        <circle cx="55"  cy="45" r="40" fill="#C0392B" stroke="#111" stroke-width="4"/>
+        <text x="57" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="900" fill="#111">C</text>
+      </svg>
+      <span class="divider__line"></span>
+    </div>
+
+    <!-- ============================================================
+         CONTACTO
+    ============================================================ -->
+    <section class="contacto" id="contacto">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">¿Cuándo y dónde?</span>
+          <h2>Encuéntranos</h2>
+        </header>
+
+        <div class="contacto__grid">
+
+          <div class="contacto__info fade-up">
+
+            <div class="info-block">
+              <h3 class="info-label">Horario</h3>
+              <table class="horario">
+                <tbody>
+                  <tr class="horario--closed">
+                    <td>Lunes</td>
+                    <td>Cerrado</td>
+                  </tr>
+                  <tr>
+                    <td>Martes – Miércoles</td>
+                    <td>11:30 – 15:30</td>
+                  </tr>
+                  <tr>
+                    <td>Jueves – Sábado</td>
+                    <td>11:30 – 15:30 · 19:30 – 23:00</td>
+                  </tr>
+                  <tr>
+                    <td>Domingo</td>
+                    <td>11:30 – 16:00 · 19:30 – 23:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-label">Dirección</h3>
+              <address>
+                Avenida Eysines 24, bajo<br>
+                33450 Piedras Blancas, Asturias
+              </address>
+              <a href="https://maps.google.com/?q=Chicotin+Avenida+Eysines+24+Piedras+Blancas+Asturias" target="_blank"
+                rel="noopener" class="info-link">Cómo llegar →</a>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-label">Teléfono</h3>
+              <a href="tel:984182932" class="info-phone">984 18 29 32</a>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-label">Síguenos</h3>
+              <div class="social">
+                <!-- ⚠️  CONFIGURACIÓN: reemplaza las URLs de redes sociales -->
+                <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener"
+                  class="social__link">Facebook</a>
+                <a href="https://www.instagram.com/chicotinpiedras/" target="_blank" rel="noopener"
+                  class="social__link">Instagram</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contacto__map fade-up">
+            <iframe src="https://maps.google.com/maps?q=Avenida+Eysines+24+Piedras+Blancas+Asturias+Spain&output=embed"
+              title="Ubicación de Chicotín en Piedras Blancas" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo" aria-label="Chicotín">
+            <svg class="footer__mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
+              <circle cx="8"   cy="45" r="7"  fill="#C0392B" stroke="rgba(250,250,246,0.6)" stroke-width="2.5"/>
+              <circle cx="102" cy="45" r="7"  fill="#C0392B" stroke="rgba(250,250,246,0.6)" stroke-width="2.5"/>
+              <circle cx="55"  cy="45" r="40" fill="#C0392B" stroke="rgba(250,250,246,0.6)" stroke-width="4"/>
+              <text x="57" y="65" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="900" fill="rgba(250,250,246,0.9)">C</text>
+            </svg>
+            <span class="footer__logo-text">hicotin</span>
+          </a>
+          <p>Comida casera para llevar<br>Piedras Blancas, Asturias</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#menu-dia">Menú del día</a>
+          <a href="#carta">Carta</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="footer__contact">
+          <a href="tel:984182932">984 18 29 32</a>
+          <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/chicotinpiedras/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <p class="footer__copy">© 2025 Chicotín · Avenida Eysines 24, Piedras Blancas</p>
+    </div>
+  </footer>
+
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
