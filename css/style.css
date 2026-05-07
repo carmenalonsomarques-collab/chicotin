@@ -453,20 +453,19 @@ section { padding: var(--sp-v) 1.5rem; }
   align-items:           start;
 }
 
-/* Embed Facebook — contenedor */
-.menudia__embed-wrap {
-  border-radius: var(--r-lg);
-  overflow:      hidden;
-  box-shadow:    var(--shadow-card);
-  border:        1px solid var(--border);
-  display:       flex;
+/* Tarjeta menú del día */
+.menudia__fb-card {
+  background:     var(--white);
+  border-radius:  var(--r-lg);
+  box-shadow:     var(--shadow-card);
+  border:         1px solid var(--border);
+  padding:        3rem 3.5rem;
+  display:        flex;
   flex-direction: column;
+  gap:            2rem;
 }
 
-.menudia__embed-header {
-  background:     var(--white);
-  border-bottom:  1px solid var(--border);
-  padding:        0.875rem 1.5rem;
+.menudia__fb-live {
   display:        flex;
   align-items:    center;
   gap:            0.625rem;
@@ -475,10 +474,9 @@ section { padding: var(--sp-v) 1.5rem; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color:          var(--stone);
-  flex-shrink:    0;
 }
 
-.menudia__embed-dot {
+.menudia__fb-dot {
   width:         7px;
   height:        7px;
   border-radius: 50%;
@@ -492,46 +490,93 @@ section { padding: var(--sp-v) 1.5rem; }
   50%      { opacity: 0.35; }
 }
 
-.menudia__embed-frame {
-  background: var(--white);
-  min-height: 580px;
-  flex:       1;
-}
-
-.menudia__embed-frame iframe {
-  display: block;
-  border:  none;
-  filter:  contrast(0.82) saturate(0.65) brightness(1.1);
-}
-
-/* Fallback cuando el SDK no carga o está bloqueado */
-.fb-xfbml-parse-ignore {
-  display:         flex;
-  flex-direction:  column;
-  align-items:     center;
-  justify-content: center;
-  text-align:      center;
-  padding:         3rem 2rem;
-  min-height:      400px;
-  gap:             1rem;
-  color:           var(--stone);
-  font-size:       0.95rem;
-  line-height:     1.7;
-}
-
-.fb-xfbml-parse-ignore a {
-  display:       inline-block;
-  margin-top:    0.5rem;
-  padding:       0.875rem 2rem;
-  border-radius: 100px;
-  background:    var(--terracota);
-  color:         var(--white);
+.menudia__fb-title {
+  font-family:   var(--ff-display);
+  font-size:     clamp(2rem, 4vw, 3rem);
   font-weight:   500;
-  font-size:     0.95rem;
-  transition:    background 0.15s, transform 0.15s;
+  font-style:    italic;
+  color:         var(--charcoal);
+  line-height:   1.1;
+  margin-bottom: 0.5rem;
 }
 
-.fb-xfbml-parse-ignore a:hover {
+.menudia__fb-sub {
+  color:       var(--stone);
+  font-size:   1rem;
+  line-height: 1.65;
+}
+
+.menudia__fb-estructura {
+  display:       grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:           1.5rem;
+  padding:       1.75rem 0;
+  border-top:    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.menudia__fb-col {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.25rem;
+}
+
+.menudia__fb-tipo {
+  font-family: var(--ff-display);
+  font-size:   1rem;
+  font-weight: 600;
+  color:       var(--charcoal);
+}
+
+.menudia__fb-detalle {
+  font-size:   0.78rem;
+  color:       var(--stone);
+  line-height: 1.4;
+}
+
+.menudia__fb-precios {
+  display: flex;
+  gap:     3rem;
+}
+
+.menudia__fb-precio-item {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.125rem;
+}
+
+.menudia__fb-precio-label {
+  font-size:      0.65rem;
+  font-weight:    500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--stone);
+}
+
+.menudia__fb-precio-num {
+  font-family: var(--ff-display);
+  font-size:   2.25rem;
+  font-weight: 500;
+  color:       var(--terracota);
+  line-height: 1;
+}
+
+.menudia__fb-cta {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.625rem;
+  padding:         0.875rem 1.75rem;
+  background:      var(--terracota);
+  color:           var(--white);
+  border-radius:   100px;
+  font-size:       0.95rem;
+  font-weight:     500;
+  align-self:      flex-start;
+  text-decoration: none;
+  transition:      background 0.15s, transform 0.15s;
+}
+
+.menudia__fb-cta:hover {
   background: var(--terracota-dk);
   transform:  translateY(-2px);
 }
@@ -1511,7 +1556,8 @@ address {
   }
 
   /* Menú del día */
-  .menudia__embed-frame { min-height: 460px; }
+  .menudia__fb-card       { padding: 2rem 1.75rem; }
+  .menudia__fb-estructura { grid-template-columns: repeat(2, 1fr); }
 
   /* Cookie banner */
   .cookie-banner__inner { gap: 1rem; }

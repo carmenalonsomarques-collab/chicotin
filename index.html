@@ -106,28 +106,47 @@
 
         <div class="menudia__body">
 
-          <div class="menudia__embed-wrap fade-up">
-            <div class="menudia__embed-header">
-              <span class="menudia__embed-dot" aria-hidden="true"></span>
-              Se actualiza cada mañana
+          <div class="menudia__fb-card fade-up">
+            <div class="menudia__fb-live">
+              <span class="menudia__fb-dot" aria-hidden="true"></span>
+              Lo publicamos cada mañana en Facebook
             </div>
-            <div class="menudia__embed-frame">
-              <div id="fb-root"></div>
-              <div class="fb-page"
-                data-href="https://www.facebook.com/Chicotincomidaparallevar/"
-                data-tabs="timeline"
-                data-width="700"
-                data-height="580"
-                data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="true"
-                data-show-facepile="false">
-                <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
-                  <p>El menú de hoy se publica cada mañana en nuestra página de Facebook.</p>
-                  <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Ver el menú de hoy →</a>
-                </blockquote>
+            <div class="menudia__fb-main">
+              <h3 class="menudia__fb-title">¿Qué hay hoy?</h3>
+              <p class="menudia__fb-sub">Dos primeros, dos segundos a elegir,<br>acompañamiento y postre casero.</p>
+            </div>
+            <div class="menudia__fb-estructura">
+              <div class="menudia__fb-col">
+                <span class="menudia__fb-tipo">Primeros</span>
+                <span class="menudia__fb-detalle">2 a elegir</span>
+              </div>
+              <div class="menudia__fb-col">
+                <span class="menudia__fb-tipo">Segundos</span>
+                <span class="menudia__fb-detalle">2 a elegir</span>
+              </div>
+              <div class="menudia__fb-col">
+                <span class="menudia__fb-tipo">Acompañamiento</span>
+                <span class="menudia__fb-detalle">patatas, arroz o ensalada</span>
+              </div>
+              <div class="menudia__fb-col">
+                <span class="menudia__fb-tipo">Postre</span>
+                <span class="menudia__fb-detalle">casero del día</span>
               </div>
             </div>
+            <div class="menudia__fb-precios">
+              <div class="menudia__fb-precio-item">
+                <span class="menudia__fb-precio-label">Entre semana</span>
+                <strong class="menudia__fb-precio-num">12€</strong>
+              </div>
+              <div class="menudia__fb-precio-item">
+                <span class="menudia__fb-precio-label">Fin de semana</span>
+                <strong class="menudia__fb-precio-num">18€</strong>
+              </div>
+            </div>
+            <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener" class="menudia__fb-cta">
+              Ver los platos de hoy en Facebook
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
           </div>
 
           <div class="menudia__aside fade-up">
@@ -956,7 +975,6 @@
     </div>
   </div>
 
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"></script>
   <script src="js/main.js"></script>
 </body>
 
