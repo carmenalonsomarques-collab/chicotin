@@ -498,6 +498,12 @@ section { padding: var(--sp-v) 1.5rem; }
   flex:       1;
 }
 
+.menudia__embed-frame iframe {
+  display: block;
+  border:  none;
+  filter:  contrast(0.82) saturate(0.65) brightness(1.1);
+}
+
 /* Fallback cuando el SDK no carga o está bloqueado */
 .fb-xfbml-parse-ignore {
   display:         flex;
