@@ -106,22 +106,27 @@
 
         <div class="menudia__body">
 
-          <div class="menudia__feed fade-up">
-            <div id="fb-root"></div>
-            <div class="fb-page"
-              data-href="https://www.facebook.com/Chicotincomidaparallevar/"
-              data-tabs="timeline"
-              data-width="600"
-              data-small-header="true"
-              data-adapt-container-width="true"
-              data-hide-cover="true"
-              data-show-facepile="false">
-              <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
-                <p>Lo publicamos cada mañana en nuestra página de Facebook.</p>
-                <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">
-                  Ver el menú de hoy →
-                </a>
-              </blockquote>
+          <div class="menudia__embed-wrap fade-up">
+            <div class="menudia__embed-header">
+              <span class="menudia__embed-dot" aria-hidden="true"></span>
+              Se actualiza cada mañana
+            </div>
+            <div class="menudia__embed-frame">
+              <div id="fb-root"></div>
+              <div class="fb-page"
+                data-href="https://www.facebook.com/Chicotincomidaparallevar/"
+                data-tabs="timeline"
+                data-width="700"
+                data-height="580"
+                data-small-header="true"
+                data-adapt-container-width="true"
+                data-hide-cover="true"
+                data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
+                  <p>El menú de hoy se publica cada mañana en nuestra página de Facebook.</p>
+                  <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Ver el menú de hoy →</a>
+                </blockquote>
+              </div>
             </div>
           </div>
 
@@ -674,7 +679,7 @@
       <div class="container">
 
         <header class="section-header fade-up">
-          <span class="eyebrow">4,7 · 267 valoraciones en Google</span>
+          <a href="https://www.google.com/maps/search/Chicotín+Avenida+Eysines+24+Piedras+Blancas+Asturias" target="_blank" rel="noopener" class="eyebrow eyebrow--link">★ 4,7 · 267 valoraciones verificadas en Google ↗</a>
           <h2>Lo que dice la gente</h2>
         </header>
 
@@ -747,6 +752,12 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </button>
           </div>
+        </div>
+
+        <div class="reseñas__google fade-up">
+          <a href="https://www.google.com/maps/search/Chicotín+Avenida+Eysines+24+Piedras+Blancas+Asturias" target="_blank" rel="noopener" class="reseñas__google-link">
+            Ver las 267 reseñas en Google Maps →
+          </a>
         </div>
 
       </div>
@@ -925,9 +936,25 @@
           <a href="https://www.instagram.com/chicotinpiedras/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <p class="footer__copy">© 2025 Chicotín · Avenida Eysines 24, Piedras Blancas</p>
+      <p class="footer__copy">© 2026 Chicotín · Avenida Eysines 24, Piedras Blancas</p>
+      <nav class="footer__legal" aria-label="Textos legales">
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="politica-privacidad.html">Privacidad</a>
+        <a href="politica-cookies.html">Cookies</a>
+      </nav>
     </div>
   </footer>
+
+  <!-- Cookie banner -->
+  <div class="cookie-banner" id="cookieBanner" hidden>
+    <div class="cookie-banner__inner">
+      <p>Usamos cookies técnicas de Google Maps para mostrar nuestra ubicación. <a href="politica-cookies.html">Más información</a></p>
+      <div class="cookie-banner__btns">
+        <button id="cookieAccept" class="cookie-banner__accept">Aceptar y continuar</button>
+        <a href="politica-cookies.html" class="cookie-banner__more">Gestionar preferencias</a>
+      </div>
+    </div>
+  </div>
 
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"></script>
   <script src="js/main.js"></script>

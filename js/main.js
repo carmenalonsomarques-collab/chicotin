@@ -147,6 +147,21 @@ const schedule = {
   6: { open: true,  label: '11:30 – 15:30 · 19:30 – 23:00' }, // sábado
 };
 
+// ----------------------------------------------------------
+// Cookie banner
+// ----------------------------------------------------------
+const cookieBanner = document.getElementById('cookieBanner');
+if (cookieBanner && !localStorage.getItem('chicotin-cookies')) {
+  cookieBanner.removeAttribute('hidden');
+}
+document.getElementById('cookieAccept')?.addEventListener('click', () => {
+  localStorage.setItem('chicotin-cookies', '1');
+  document.getElementById('cookieBanner').setAttribute('hidden', '');
+});
+
+// ----------------------------------------------------------
+// Today's opening hours
+// ----------------------------------------------------------
 const hoursEl = document.getElementById('hoursToday');
 if (hoursEl) {
   const today = new Date().getDay();
