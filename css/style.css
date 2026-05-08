@@ -36,7 +36,7 @@
    Reset
    ---------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html                   { scroll-behavior: smooth; }
+html                   { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: var(--ff-body);
   background:  var(--cream);
@@ -342,7 +342,6 @@ section { padding: var(--sp-v) 1.5rem; }
   flex-direction:  column;
   justify-content: center;
   padding:         7rem 1.5rem 5rem;
-  overflow:        hidden;
 }
 
 .hero__bg {
@@ -1345,27 +1344,29 @@ address {
 }
 
 /* ----------------------------------------------------------
-   Panel flotante — menú del día
+   Dropdown en flujo — menú del día (hero)
    ---------------------------------------------------------- */
-.hero-menu-panel {
-  position:      fixed;
-  z-index:       800;
+.hero__menu-dropdown {
+  display:              grid;
+  grid-template-rows:   0fr;
+  transition:           grid-template-rows 0.4s ease, margin-top 0.4s ease;
+  margin-top:           0;
+  width:                100%;
+  max-width:            640px;
+}
+
+.hero__menu-dropdown.is-open {
+  grid-template-rows: 1fr;
+  margin-top:         1.5rem;
+}
+
+.hero__menu-dropdown-inner {
+  overflow:      hidden;
+  min-height:    0;
   background:    var(--cream);
   border:        1px solid var(--border);
   border-radius: var(--r-lg);
-  box-shadow:    var(--shadow-hover);
-  width:         500px;
-  max-width:     calc(100vw - 2rem);
-  max-height:    75vh;
-  overflow-y:    auto;
-  animation:     hero-panel-in 0.22s ease;
-}
-
-.hero-menu-panel[hidden] { display: none; }
-
-@keyframes hero-panel-in {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  box-shadow:    var(--shadow-card);
 }
 
 /* Fallback cuando el SDK está bloqueado */

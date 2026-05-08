@@ -148,43 +148,20 @@ const schedule = {
 };
 
 // ----------------------------------------------------------
-// Panel flotante — Menú del día
+// Dropdown en flujo — Menú del día (hero)
 // ----------------------------------------------------------
 (function () {
-  const btn   = document.getElementById('heroMenuBtn');
-  const panel = document.getElementById('heroMenuPanel');
-  if (!btn || !panel) return;
+  const btn      = document.getElementById('heroMenuBtn');
+  const dropdown = document.getElementById('heroMenuDropdown');
+  if (!btn || !dropdown) return;
 
   let parsed = false;
 
-  function positionPanel() {
-    const rect = btn.getBoundingClientRect();
-    const left = Math.max(12, Math.min(rect.left, window.innerWidth - 512));
-    panel.style.top  = (rect.bottom + window.scrollY + 10) + 'px';
-    panel.style.left = left + 'px';
-  }
-
-  function openPanel() {
-    positionPanel();
-    panel.removeAttribute('hidden');
-    btn.setAttribute('aria-expanded', 'true');
-    if (!parsed && window.FB) { window.FB.XFBML.parse(); parsed = true; }
-  }
-
-  function closePanel() {
-    panel.setAttribute('hidden', '');
-    btn.setAttribute('aria-expanded', 'false');
-  }
-
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
-    panel.hasAttribute('hidden') ? openPanel() : closePanel();
+  btn.addEventListener('click', () => {
+    const open = dropdown.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(open));
+    if (open && !parsed && window.FB) { window.FB.XFBML.parse(); parsed = true; }
   });
-
-  document.addEventListener('click', closePanel);
-  panel.addEventListener('click', e => e.stopPropagation());
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
-  window.addEventListener('resize', () => { if (!panel.hasAttribute('hidden')) positionPanel(); });
 })();
 
 // ----------------------------------------------------------
