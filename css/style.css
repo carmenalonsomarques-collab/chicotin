@@ -1407,16 +1407,9 @@ address {
   box-shadow:    var(--shadow-card);
 }
 
-.hero__carta-link {
-  display:     inline-block;
-  margin-top:  1.25rem;
-  font-size:   0.875rem;
-  font-weight: 500;
-  color:       var(--stone);
-  transition:  color 0.15s;
+.hero__carta-btn {
+  margin-top: 1.25rem;
 }
-
-.hero__carta-link:hover { color: var(--terracota); }
 
 /* Fallback cuando el SDK está bloqueado */
 .fb-xfbml-parse-ignore {
