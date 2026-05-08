@@ -148,6 +148,21 @@ const schedule = {
 };
 
 // ----------------------------------------------------------
+// Acordeón — Menú del día
+// ----------------------------------------------------------
+(function () {
+  const btn     = document.getElementById('menuToggleBtn');
+  const content = document.getElementById('menuContenido');
+  if (!btn || !content) return;
+
+  btn.addEventListener('click', () => {
+    const open = content.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open);
+    if (open && window.FB) window.FB.XFBML.parse();
+  });
+})();
+
+// ----------------------------------------------------------
 // Cookie banner
 // ----------------------------------------------------------
 const cookieBanner = document.getElementById('cookieBanner');

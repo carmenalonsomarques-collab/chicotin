@@ -143,10 +143,31 @@
                 <strong class="menudia__fb-precio-num">18€</strong>
               </div>
             </div>
-            <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener" class="menudia__fb-cta">
-              Ver los platos de hoy en Facebook
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
+            <button class="menudia__fb-cta" id="menuToggleBtn" aria-expanded="false" aria-controls="menuContenido">
+              Ver el menú de hoy
+              <svg class="menudia__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+
+            <div class="menudia__contenido" id="menuContenido">
+              <div class="menudia__contenido-inner">
+                <div class="menudia__fb-embed">
+                  <div id="fb-root"></div>
+                  <div class="fb-page"
+                    data-href="https://www.facebook.com/Chicotincomidaparallevar/"
+                    data-tabs="timeline"
+                    data-width="600"
+                    data-height="520"
+                    data-small-header="true"
+                    data-adapt-container-width="true"
+                    data-hide-cover="true"
+                    data-show-facepile="false">
+                    <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
+                      <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Ver el menú de hoy en Facebook →</a>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="menudia__aside fade-up">
@@ -975,6 +996,7 @@
     </div>
   </div>
 
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v19.0"></script>
   <script src="js/main.js"></script>
 </body>
 
