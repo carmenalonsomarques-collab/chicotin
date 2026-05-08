@@ -81,7 +81,10 @@
           Solo lo de siempre, hecho con ganas.
         </p>
         <div class="hero__ctas">
-          <a href="#menu-dia" class="btn btn--fill">Ver el menú de hoy</a>
+          <button class="btn btn--fill hero__menu-btn" id="heroMenuBtn" aria-expanded="false" aria-controls="heroMenuPanel">
+            Ver el menú de hoy
+            <svg class="hero__menu-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
           <a href="tel:984182932" class="btn btn--ghost">Llamar para pedir</a>
         </div>
       </div>
@@ -143,31 +146,7 @@
                 <strong class="menudia__fb-precio-num">18€</strong>
               </div>
             </div>
-            <button class="menudia__fb-cta" id="menuToggleBtn" aria-expanded="false" aria-controls="menuContenido">
-              Ver el menú de hoy
-              <svg class="menudia__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-
-            <div class="menudia__contenido" id="menuContenido">
-              <div class="menudia__contenido-inner">
-                <div class="menudia__fb-embed">
-                  <div id="fb-root"></div>
-                  <div class="fb-page"
-                    data-href="https://www.facebook.com/Chicotincomidaparallevar/"
-                    data-tabs="timeline"
-                    data-width="600"
-                    data-height="520"
-                    data-small-header="true"
-                    data-adapt-container-width="true"
-                    data-hide-cover="true"
-                    data-show-facepile="false">
-                    <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
-                      <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Ver el menú de hoy en Facebook →</a>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener" class="menudia__fb-link">Ver en Facebook →</a>
           </div>
 
           <div class="menudia__aside fade-up">
@@ -984,6 +963,24 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Panel flotante — Menú del día (se posiciona bajo el botón del hero via JS) -->
+  <div class="hero-menu-panel" id="heroMenuPanel" hidden>
+    <div id="fb-root"></div>
+    <div class="fb-page"
+      data-href="https://www.facebook.com/Chicotincomidaparallevar/"
+      data-tabs="timeline"
+      data-width="480"
+      data-height="520"
+      data-small-header="true"
+      data-adapt-container-width="true"
+      data-hide-cover="true"
+      data-show-facepile="false">
+      <blockquote cite="https://www.facebook.com/Chicotincomidaparallevar/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Ver el menú de hoy en Facebook →</a>
+      </blockquote>
+    </div>
+  </div>
 
   <!-- Cookie banner -->
   <div class="cookie-banner" id="cookieBanner" hidden>

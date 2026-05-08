@@ -148,32 +148,43 @@ const schedule = {
 };
 
 // ----------------------------------------------------------
-// Acordeón — Menú del día
+// Panel flotante — Menú del día
 // ----------------------------------------------------------
 (function () {
-  const btn     = document.getElementById('menuToggleBtn');
-  const content = document.getElementById('menuContenido');
-  if (!btn || !content) return;
+  const btn   = document.getElementById('heroMenuBtn');
+  const panel = document.getElementById('heroMenuPanel');
+  if (!btn || !panel) return;
 
-  function openMenu() {
-    content.classList.add('is-open');
-    btn.setAttribute('aria-expanded', 'true');
-    if (window.FB) window.FB.XFBML.parse();
+  let parsed = false;
+
+  function positionPanel() {
+    const rect = btn.getBoundingClientRect();
+    const left = Math.max(12, Math.min(rect.left, window.innerWidth - 512));
+    panel.style.top  = (rect.bottom + window.scrollY + 10) + 'px';
+    panel.style.left = left + 'px';
   }
 
-  btn.addEventListener('click', () => {
-    const open = content.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', open);
-    if (open && window.FB) window.FB.XFBML.parse();
+  function openPanel() {
+    positionPanel();
+    panel.removeAttribute('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    if (!parsed && window.FB) { window.FB.XFBML.parse(); parsed = true; }
+  }
+
+  function closePanel() {
+    panel.setAttribute('hidden', '');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    panel.hasAttribute('hidden') ? openPanel() : closePanel();
   });
 
-  // Abrir acordeón al llegar desde cualquier enlace a #menu-dia
-  document.querySelectorAll('a[href="#menu-dia"]').forEach(link => {
-    link.addEventListener('click', () => setTimeout(openMenu, 400));
-  });
-
-  // Abrir si la página carga directamente con #menu-dia en la URL
-  if (window.location.hash === '#menu-dia') openMenu();
+  document.addEventListener('click', closePanel);
+  panel.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+  window.addEventListener('resize', () => { if (!panel.hasAttribute('hidden')) positionPanel(); });
 })();
 
 // ----------------------------------------------------------

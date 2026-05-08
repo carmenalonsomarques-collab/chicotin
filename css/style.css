@@ -1328,44 +1328,44 @@ address {
 }
 
 /* ----------------------------------------------------------
-   Acordeón — contenido del menú del día
+   Botón hero — menú
    ---------------------------------------------------------- */
-.menudia__fb-cta {
-  background: none;
-  border:     none;
-  cursor:     pointer;
+.hero__menu-btn {
   font-family: var(--ff-body);
+  cursor:      pointer;
 }
 
-.menudia__chevron {
-  transition: transform 0.3s ease;
+.hero__menu-chevron {
+  transition:  transform 0.3s ease;
   flex-shrink: 0;
 }
 
-.menudia__fb-cta[aria-expanded="true"] .menudia__chevron {
+.hero__menu-btn[aria-expanded="true"] .hero__menu-chevron {
   transform: rotate(180deg);
 }
 
-.menudia__contenido {
-  display:    grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s ease;
+/* ----------------------------------------------------------
+   Panel flotante — menú del día
+   ---------------------------------------------------------- */
+.hero-menu-panel {
+  position:      fixed;
+  z-index:       800;
+  background:    var(--cream);
+  border:        1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow:    var(--shadow-hover);
+  width:         500px;
+  max-width:     calc(100vw - 2rem);
+  max-height:    75vh;
+  overflow-y:    auto;
+  animation:     hero-panel-in 0.22s ease;
 }
 
-.menudia__contenido.is-open {
-  grid-template-rows: 1fr;
-}
+.hero-menu-panel[hidden] { display: none; }
 
-.menudia__contenido-inner {
-  overflow: hidden;
-}
-
-.menudia__fb-embed {
-  margin-top:    1.25rem;
-  border-top:    1px solid var(--border);
-  border-radius: 0 0 var(--r-lg) var(--r-lg);
-  overflow:      hidden;
-  min-height:    520px;
+@keyframes hero-panel-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Fallback cuando el SDK está bloqueado */
@@ -1373,7 +1373,7 @@ address {
   display:         flex;
   align-items:     center;
   justify-content: center;
-  min-height:      200px;
+  min-height:      180px;
   padding:         2rem;
   text-align:      center;
 }
