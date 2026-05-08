@@ -186,7 +186,8 @@ document.getElementById('cookieAccept')?.addEventListener('click', () => {
   const nextEl     = document.getElementById('hoursNext');
   if (!widget) return;
 
-  const DAY_NAMES = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+  const DAY_NAMES   = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+  const MONTH_NAMES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
   function hhmm(t) {
     return Math.floor(t / 100) + ':' + String(t % 100).padStart(2, '0');
@@ -210,16 +211,17 @@ document.getElementById('cookieAccept')?.addEventListener('click', () => {
     widget.classList.toggle('is-open',   isOpen);
     widget.classList.toggle('is-closed', !isOpen);
 
-    const dayName = DAY_NAMES[day].charAt(0).toUpperCase() + DAY_NAMES[day].slice(1);
+    const dayName  = DAY_NAMES[day].charAt(0).toUpperCase() + DAY_NAMES[day].slice(1);
+    const dateLabel = dayName + ' ' + now.getDate() + ' de ' + MONTH_NAMES[now.getMonth()];
 
     if (isOpen) {
       statusEl.textContent   = 'Abierto ahora';
-      scheduleEl.textContent = dayName + ': ' + slotsLabel(slots);
+      scheduleEl.textContent = dateLabel + ': ' + slotsLabel(slots);
       nextEl.textContent     = 'Cierra a las ' + hhmm(closesAt);
       nextEl.removeAttribute('hidden');
     } else {
       statusEl.textContent   = slots.length ? 'Cerrado ahora' : 'Hoy cerramos';
-      scheduleEl.textContent = slots.length ? dayName + ': ' + slotsLabel(slots) : '';
+      scheduleEl.textContent = slots.length ? dateLabel + ': ' + slotsLabel(slots) : '';
 
       // Next opening: remaining slot today, or first slot of next open day
       const upcoming = slots.find(([o]) => nowT < o);
