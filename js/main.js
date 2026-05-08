@@ -210,14 +210,16 @@ document.getElementById('cookieAccept')?.addEventListener('click', () => {
     widget.classList.toggle('is-open',   isOpen);
     widget.classList.toggle('is-closed', !isOpen);
 
+    const dayName = DAY_NAMES[day].charAt(0).toUpperCase() + DAY_NAMES[day].slice(1);
+
     if (isOpen) {
       statusEl.textContent   = 'Abierto ahora';
-      scheduleEl.textContent = 'Hoy: ' + slotsLabel(slots);
+      scheduleEl.textContent = dayName + ': ' + slotsLabel(slots);
       nextEl.textContent     = 'Cierra a las ' + hhmm(closesAt);
       nextEl.removeAttribute('hidden');
     } else {
       statusEl.textContent   = slots.length ? 'Cerrado ahora' : 'Hoy cerramos';
-      scheduleEl.textContent = slots.length ? 'Hoy: ' + slotsLabel(slots) : '';
+      scheduleEl.textContent = slots.length ? dayName + ': ' + slotsLabel(slots) : '';
 
       // Next opening: remaining slot today, or first slot of next open day
       const upcoming = slots.find(([o]) => nowT < o);
