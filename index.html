@@ -134,7 +134,7 @@
               Lo publicamos cada mañana en Facebook
             </div>
             <div class="menudia__fb-main">
-              <h3 class="menudia__fb-title">¿Qué hay hoy?</h3>
+              <h3 class="menudia__fb-title">Cómo funciona el menú</h3>
               <p class="menudia__fb-sub">Dos primeros, dos segundos a elegir,<br>acompañamiento y postre casero.</p>
             </div>
             <div class="menudia__fb-estructura">
@@ -180,9 +180,13 @@
               </a>
             </div>
 
-            <div class="menudia__hours">
-              <p class="menudia__hours-label">Hoy abrimos</p>
-              <p class="menudia__hours-today" id="hoursToday">Consultando horario…</p>
+            <div class="menudia__hours" id="hoursWidget">
+              <div class="hours__row">
+                <span class="hours__dot" aria-hidden="true"></span>
+                <strong class="hours__status-text" id="hoursStatusText">Consultando…</strong>
+              </div>
+              <p class="hours__schedule" id="hoursToday"></p>
+              <p class="hours__next" id="hoursNext" hidden></p>
             </div>
           </div>
 

@@ -134,17 +134,17 @@ setTimeout(() => {
 }, 800);
 
 // ----------------------------------------------------------
-// Today's opening hours
+// Today's opening hours — real time
 // ----------------------------------------------------------
 const schedule = {
-  // 0 = Sunday … 6 = Saturday
-  0: { open: true,  label: '11:30 – 16:00 · 19:30 – 23:00' }, // domingo
-  1: { open: false, label: 'Hoy cerramos' },                    // lunes
-  2: { open: true,  label: '11:30 – 15:30' },                  // martes
-  3: { open: true,  label: '11:30 – 15:30' },                  // miércoles
-  4: { open: true,  label: '11:30 – 15:30 · 19:30 – 23:00' }, // jueves
-  5: { open: true,  label: '11:30 – 15:30 · 19:30 – 23:00' }, // viernes
-  6: { open: true,  label: '11:30 – 15:30 · 19:30 – 23:00' }, // sábado
+  // 0 = Sunday … 6 = Saturday  (slots: [open HHMM, close HHMM])
+  0: { slots: [[1130, 1600], [1930, 2300]] }, // domingo
+  1: { slots: [] },                             // lunes (cerrado)
+  2: { slots: [[1130, 1530]] },                 // martes
+  3: { slots: [[1130, 1530]] },                 // miércoles
+  4: { slots: [[1130, 1530], [1930, 2300]] },   // jueves
+  5: { slots: [[1130, 1530], [1930, 2300]] },   // viernes
+  6: { slots: [[1130, 1530], [1930, 2300]] },   // sábado
 };
 
 // ----------------------------------------------------------
@@ -177,12 +177,68 @@ document.getElementById('cookieAccept')?.addEventListener('click', () => {
 });
 
 // ----------------------------------------------------------
-// Today's opening hours
+// Real-time opening hours widget
 // ----------------------------------------------------------
-const hoursEl = document.getElementById('hoursToday');
-if (hoursEl) {
-  const today = new Date().getDay();
-  const info  = schedule[today];
-  hoursEl.textContent = info.label;
-  hoursEl.classList.add(info.open ? 'open' : 'closed');
-}
+(function () {
+  const widget     = document.getElementById('hoursWidget');
+  const statusEl   = document.getElementById('hoursStatusText');
+  const scheduleEl = document.getElementById('hoursToday');
+  const nextEl     = document.getElementById('hoursNext');
+  if (!widget) return;
+
+  const DAY_NAMES = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+
+  function hhmm(t) {
+    return Math.floor(t / 100) + ':' + String(t % 100).padStart(2, '0');
+  }
+
+  function slotsLabel(slots) {
+    return slots.map(([a, b]) => hhmm(a) + ' – ' + hhmm(b)).join(' · ');
+  }
+
+  function update() {
+    const now   = new Date();
+    const day   = now.getDay();
+    const nowT  = now.getHours() * 100 + now.getMinutes();
+    const slots = schedule[day].slots;
+
+    let isOpen = false, closesAt = null;
+    for (const [o, c] of slots) {
+      if (nowT >= o && nowT < c) { isOpen = true; closesAt = c; break; }
+    }
+
+    widget.classList.toggle('is-open',   isOpen);
+    widget.classList.toggle('is-closed', !isOpen);
+
+    if (isOpen) {
+      statusEl.textContent   = 'Abierto ahora';
+      scheduleEl.textContent = 'Hoy: ' + slotsLabel(slots);
+      nextEl.textContent     = 'Cierra a las ' + hhmm(closesAt);
+      nextEl.removeAttribute('hidden');
+    } else {
+      statusEl.textContent   = slots.length ? 'Cerrado ahora' : 'Hoy cerramos';
+      scheduleEl.textContent = slots.length ? 'Hoy: ' + slotsLabel(slots) : '';
+
+      // Next opening: remaining slot today, or first slot of next open day
+      const upcoming = slots.find(([o]) => nowT < o);
+      let nextMsg = '';
+      if (upcoming) {
+        nextMsg = 'Abre hoy a las ' + hhmm(upcoming[0]);
+      } else {
+        for (let d = 1; d <= 7; d++) {
+          const nd = (day + d) % 7;
+          if (schedule[nd].slots.length) {
+            const when = d === 1 ? 'mañana' : 'el ' + DAY_NAMES[nd];
+            nextMsg = 'Abre ' + when + ' a las ' + hhmm(schedule[nd].slots[0][0]);
+            break;
+          }
+        }
+      }
+      if (nextMsg) { nextEl.textContent = nextMsg; nextEl.removeAttribute('hidden'); }
+      else nextEl.setAttribute('hidden', '');
+    }
+  }
+
+  update();
+  setInterval(update, 60000); // refresca cada minuto
+})();
