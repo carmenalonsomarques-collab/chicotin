@@ -1667,9 +1667,12 @@ address {
   .menudia__fb-card       { padding: 2rem 1.75rem; }
   .menudia__fb-estructura { grid-template-columns: repeat(2, 1fr); }
 
-  /* Cookie banner */
-  .cookie-banner__inner { gap: 1rem; }
-  .cookie-banner__btns  { width: 100%; justify-content: flex-end; }
+  /* Cookie banner — compacto en móvil */
+  .cookie-banner            { padding: 0.625rem 1rem; }
+  .cookie-banner__inner     { gap: 0.625rem; flex-wrap: nowrap; align-items: center; }
+  .cookie-banner__inner p   { font-size: 0.775rem; line-height: 1.4; min-width: 0; }
+  .cookie-banner__more      { display: none; }
+  .cookie-banner__accept    { padding: 0.5rem 1rem; font-size: 0.8rem; white-space: nowrap; flex-shrink: 0; }
 
   /* Carta — tabs táctiles */
   .carta__tab {
