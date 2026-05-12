@@ -6,22 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chicotín — Comida casera para llevar · Piedras Blancas, Asturias</title>
   <meta name="description"
-    content="Comida casera para llevar en Piedras Blancas, Asturias. Menú del día, hamburguesas, bocadillos, cachopos y especialidades. 4,7 ★ en Google. Llámanos: 984 18 29 32.">
+    content="Comida casera para llevar en Piedras Blancas, Asturias. A 5 minutos de Salinas y Avilés. Menú del día, hamburguesas, cachopos y especialidades. 4,7 ★ en Google. 984 18 29 32.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://chicotin.es/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon.svg">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="restaurant">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Chicotín — Comida casera para llevar · Piedras Blancas">
   <meta property="og:description" content="Menú del día, hamburguesas, cachopos y especialidades caseras. Para llevar en Piedras Blancas, Asturias. 4,7 ★ en Google.">
   <meta property="og:url" content="https://chicotin.es/">
   <meta property="og:site_name" content="Chicotín">
   <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://chicotin.es/cocineros.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Álvaro y Manuel en la cocina de Chicotín, Piedras Blancas">
 
   <!-- Twitter Card -->
@@ -99,9 +97,121 @@
         "closes": "23:00"
       }
     ],
+    "areaServed": {"@type": "City", "name": "Piedras Blancas"},
+    "hasMenu": "#menu-chicotin",
     "sameAs": [
       "https://www.facebook.com/Chicotincomidaparallevar/",
       "https://www.instagram.com/chicotinpiedras/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Carta -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "@id": "#menu-chicotin",
+    "name": "Carta de Chicotín",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Hamburguesas",
+        "description": "Todas acompañadas de patatas fritas",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Hamburguesa Pollo", "description": "Pollo crujiente, queso, lechuga, cebolla caramelizada y mayonesa", "offers": {"@type": "Offer", "price": "9.50", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Hamburguesa Bacon y Queso", "description": "Carne de vacuno, bacon y queso cheddar", "offers": {"@type": "Offer", "price": "10.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Hamburguesa Barbacoa", "description": "Carne de vacuno, queso cheddar, bacon, lechuga, cebolla caramelizada y salsa BBQ", "offers": {"@type": "Offer", "price": "10.20", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Hamburguesa Chicotín", "description": "Carne de vacuno, bacon, queso cheddar, pepinillo, lechuga, cebolla caramelizada y tomate", "offers": {"@type": "Offer", "price": "10.50", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Hamburguesa Chicotín Animal", "description": "La Chicotín, pero doble", "offers": {"@type": "Offer", "price": "13.50", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Hamburguesa Vegana", "description": "Hamburguesa casera de garbanzos, tomate, calabacín, cebolla, lechuga y queso vegano", "offers": {"@type": "Offer", "price": "10.50", "priceCurrency": "EUR"}, "suitableForDiet": "https://schema.org/VeganDiet"}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Bocadillos",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Bocadillo de Pollo", "description": "Pollo a la plancha, lechuga, tomate y mayonesa", "offers": {"@type": "Offer", "price": "7.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Bocadillo de Lomo", "description": "Lomo adobado a la plancha, queso y salsa Chicotín", "offers": {"@type": "Offer", "price": "7.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Bocadillo Chicotín", "description": "Chuleta de cerdo crujiente, queso, bacon, cebolla caramelizada, rúcula y salsa Chicotín", "offers": {"@type": "Offer", "price": "8.00", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Especialidades",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Cachopo de Jamón Ibérico y Queso", "offers": {"@type": "Offer", "price": "16.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Cachopo de Cecina y Queso de Cabra", "offers": {"@type": "Offer", "price": "16.50", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Cachopo Chicotín", "description": "Filete de ternera, jamón ibérico, pimientos del piquillo, cebolla caramelizada y queso ahumado", "offers": {"@type": "Offer", "price": "18.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Ensalada Chicotín", "description": "Lechuga, aceitunas, nueces, queso de cabra, pollo y uvas pasas", "offers": {"@type": "Offer", "price": "10.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Croquetas", "description": "De jamón ibérico, calamares en su tinta o bacalao", "offers": {"@type": "Offer", "price": "9.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Lasaña Atún o Carne", "offers": {"@type": "Offer", "price": "8.50", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Ensaladilla Rusa", "offers": {"@type": "Offer", "price": "6.50", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Menú del día",
+        "description": "2 primeros y 2 segundos a elegir, acompañamiento y postre casero",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Menú del día entre semana", "description": "2 primeros, 2 segundos a elegir, acompañamiento y postre casero", "offers": {"@type": "Offer", "price": "12.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Menú del día fin de semana", "description": "2 primeros, 2 segundos a elegir, acompañamiento y postre casero", "offers": {"@type": "Offer", "price": "18.00", "priceCurrency": "EUR"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Postres",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "Arroz con Leche", "offers": {"@type": "Offer", "price": "2.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Natillas", "offers": {"@type": "Offer", "price": "2.00", "priceCurrency": "EUR"}},
+          {"@type": "MenuItem", "name": "Mousse", "offers": {"@type": "Offer", "price": "2.00", "priceCurrency": "EUR"}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuál es el menú de hoy en Chicotín?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Actualizamos el menú del día cada mañana en nuestro Facebook (facebook.com/Chicotincomidaparallevar). También puedes llamarnos al 984 18 29 32 y te lo decimos al momento."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hacéis reparto a domicilio en Piedras Blancas?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sí, repartimos a domicilio en Piedras Blancas. Llámanos al 984 18 29 32 para hacer tu pedido."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Tenéis opciones vegetarianas o veganas?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sí. Tenemos hamburguesa vegana casera de garbanzos, ensaladas variadas y otros platos sin carne. Consúltanos si tienes alguna alergia o intolerancia."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo puedo hacer un pedido?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Por teléfono, llamando al 984 18 29 32. Sin apps ni plataformas de por medio."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Con cuánta antelación hay que pedir empanadas o tortillas?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Mínimo 2 días de antelación para tortillas grandes (14,50€) y empanadas de atún (20€) o carne (26€)."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Abrís los lunes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No, los lunes cerramos. Estamos abiertos de martes a domingo: martes y miércoles de 11:30 a 15:30; jueves a sábado de 11:30 a 15:30 y de 19:30 a 23:00; domingo de 11:30 a 16:00 y de 19:30 a 23:00."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde está Chicotín?",
+        "acceptedAnswer": {"@type": "Answer", "text": "En Avenida Eysines 24, bajo, 33450 Piedras Blancas, Asturias. A 5 minutos de Salinas y a 10 minutos de Avilés."}
+      }
     ]
   }
   </script>
@@ -215,6 +325,10 @@
     ============================================================ -->
     <section class="menudia" id="menu-dia">
       <div class="container">
+
+        <header class="section-header fade-up">
+          <h2>Menú del día</h2>
+        </header>
 
         <div class="menudia__body">
 
@@ -774,7 +888,7 @@
             <span class="eyebrow eyebrow--light">¿Quiénes somos?</span>
             <h2>Comida de verdad,<br><em>desde Piedras Blancas</em></h2>
             <p class="nosotros__cita">"Somos Álvaro y Manuel. Los responsables de que la comida para llevar en Piedras Blancas sea, de verdad, comida casera."</p>
-            <p>Llevamos años dando de comer a la gente de Castrillón, Avilés y alrededores con una filosofía muy sencilla: que la comida esté buena, que no arruine el bolsillo y que llegue caliente.</p>
+            <p>Llevamos años dando de comer a la gente de Piedras Blancas y alrededores con una filosofía muy sencilla: que la comida esté buena, que no arruine el bolsillo y que llegue caliente.</p>
             <p>Sin humos, sin carta en inglés, sin raciones de diseño que caben en una cuchara. Comida de toda la vida, hecha con ganas y servida sin tonterías.</p>
             <p class="nosotros__score"><strong>4.7 ★</strong> según más de 267 personas que no mienten.</p>
           </div>
@@ -926,6 +1040,79 @@
       </div>
     </section>
 
+    <!-- ============================================================
+         FAQ
+    ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">Resolvemos tus dudas</span>
+          <h2>Preguntas frecuentes</h2>
+        </header>
+
+        <div class="faq__lista fade-up">
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Cuál es el menú de hoy?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">Lo publicamos cada mañana en nuestro <a href="https://www.facebook.com/Chicotincomidaparallevar/" target="_blank" rel="noopener">Facebook</a>. También puedes llamarnos al <a href="tel:984182932">984 18 29 32</a> y te lo decimos al momento.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Hacéis reparto a domicilio?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">Sí, repartimos a domicilio en Piedras Blancas. Llámanos al <a href="tel:984182932">984 18 29 32</a> y lo gestionamos sin intermediarios.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Tenéis opciones vegetarianas o veganas?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">Sí. Tenemos hamburguesa vegana casera de garbanzos, ensaladas variadas y otros platos sin carne. Consúltanos si tienes alguna alergia o intolerancia.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Cómo hago un pedido?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">Por teléfono, llamando al <a href="tel:984182932">984 18 29 32</a>. Sin apps ni plataformas de por medio. Nos lo cuentas y lo dejamos listo.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Con cuánta antelación hay que pedir empanadas o tortillas?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">Mínimo 2 días de antelación para tortillas grandes (14,50€) y empanadas de atún (20€) o carne (26€). Llámanos para reservar la tuya.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Abrís los lunes?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">No, los lunes cerramos. Estamos abiertos de martes a domingo: martes y miércoles de 11:30 a 15:30; jueves a sábado de 11:30 a 15:30 y de 19:30 a 23:00; domingo de 11:30 a 16:00 y de 19:30 a 23:00.</p>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__pregunta">
+              ¿Dónde estáis exactamente?
+              <svg class="faq__chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p class="faq__respuesta">En Avenida Eysines 24, bajo, 33450 Piedras Blancas, Asturias. A 5 minutos de Salinas y a 10 de Avilés. <a href="https://maps.google.com/?q=Chicotin+Avenida+Eysines+24+Piedras+Blancas+Asturias" target="_blank" rel="noopener">Ver en el mapa →</a></p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
     <div class="divider" aria-hidden="true">
       <span class="divider__line"></span>
       <svg class="divider__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
@@ -984,6 +1171,11 @@
               </address>
               <a href="https://maps.google.com/?q=Chicotin+Avenida+Eysines+24+Piedras+Blancas+Asturias" target="_blank"
                 rel="noopener" class="info-link">Cómo llegar →</a>
+            </div>
+
+            <div class="info-block">
+              <h3 class="info-label">Dónde estamos</h3>
+              <p>En Piedras Blancas, a 5 minutos de Salinas y a 10 minutos de Avilés. El sitio más cercano para comer bien y para llevar.</p>
             </div>
 
             <div class="info-block">
