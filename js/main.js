@@ -160,7 +160,12 @@ const schedule = {
   btn.addEventListener('click', () => {
     const open = dropdown.classList.toggle('is-open');
     btn.setAttribute('aria-expanded', String(open));
-    if (open && !parsed && window.FB) { window.FB.XFBML.parse(); parsed = true; }
+    if (open) {
+      if (!parsed && window.FB) { window.FB.XFBML.parse(); parsed = true; }
+      setTimeout(() => {
+        dropdown.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    }
   });
 })();
 
