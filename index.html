@@ -264,6 +264,7 @@
       <li><a href="#carta">Carta</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#alergenos">Alérgenos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a href="tel:984182932" class="drawer__phone">984 18 29 32</a>
@@ -409,6 +410,8 @@
         <header class="section-header fade-up">
           <h2>Nuestra carta</h2>
         </header>
+
+        <p class="carta__alerg-link fade-up"><a href="#alergenos">¿Tienes alguna alergia o intolerancia? Consulta la carta oficial de alérgenos →</a></p>
 
         <nav class="carta__tabs fade-up" aria-label="Categorías de la carta">
           <button class="carta__tab is-active" data-panel="hamburguesas">Hamburguesas</button>
@@ -1113,6 +1116,201 @@
       </div>
     </section>
 
+    <!-- ============================================================
+         ALÉRGENOS
+    ============================================================ -->
+    <section class="alergenos" id="alergenos">
+      <div class="container">
+
+        <header class="section-header fade-up">
+          <span class="eyebrow">Reglamento (UE) Nº 1169/2011</span>
+          <h2>Carta de alérgenos</h2>
+          <p>Información oficial actualizada a mayo de 2026. Si padeces una alergia severa, indícalo al hacer tu pedido.</p>
+        </header>
+
+        <nav class="alerg__tabs fade-up" aria-label="Categorías de alérgenos">
+          <button class="alerg__tab is-active" data-alerg="hamburguesas">Hamburguesas</button>
+          <button class="alerg__tab" data-alerg="bocadillos">Bocadillos</button>
+          <button class="alerg__tab" data-alerg="sandwiches">Sándwiches</button>
+          <button class="alerg__tab" data-alerg="especialidades">Especialidades</button>
+          <button class="alerg__tab" data-alerg="postres">Postres</button>
+        </nav>
+
+        <!-- HAMBURGUESAS -->
+        <div class="alerg__panel is-active" id="alergp-hamburguesas">
+          <div class="alerg__wrap">
+            <table class="alerg__table">
+              <thead>
+                <tr>
+                  <th class="alerg__th-plato">Plato</th>
+                  <th title="Cereales con gluten">GLU</th>
+                  <th title="Lácteos y derivados">LÁC</th>
+                  <th title="Huevos y derivados">HUE</th>
+                  <th title="Pescado y derivados">PES</th>
+                  <th title="Moluscos y derivados">MOL</th>
+                  <th title="Crustáceos y derivados">CRU</th>
+                  <th title="Soja y derivados">SOJ</th>
+                  <th title="Mostaza y derivados">MOS</th>
+                  <th title="Granos de sésamo">SÉS</th>
+                  <th title="Frutos de cáscara">FRU</th>
+                  <th title="Cacahuetes y derivados">CAC</th>
+                  <th title="Apio y derivados">API</th>
+                  <th title="Sulfitos y dióxido de azufre">SUL</th>
+                  <th title="Altramuces y derivados">ALT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="alerg__plato">Pollo</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Bacon y Queso</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Barbacoa</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Picante</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Queso de Cabra</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Chicotín</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Chicotín Animal</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Vegana</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Vacuno</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- BOCADILLOS -->
+        <div class="alerg__panel" id="alergp-bocadillos">
+          <div class="alerg__wrap">
+            <table class="alerg__table">
+              <thead>
+                <tr>
+                  <th class="alerg__th-plato">Plato</th>
+                  <th title="Cereales con gluten">GLU</th><th title="Lácteos y derivados">LÁC</th><th title="Huevos y derivados">HUE</th><th title="Pescado y derivados">PES</th><th title="Moluscos y derivados">MOL</th><th title="Crustáceos y derivados">CRU</th><th title="Soja y derivados">SOJ</th><th title="Mostaza y derivados">MOS</th><th title="Granos de sésamo">SÉS</th><th title="Frutos de cáscara">FRU</th><th title="Cacahuetes y derivados">CAC</th><th title="Apio y derivados">API</th><th title="Sulfitos y dióxido de azufre">SUL</th><th title="Altramuces y derivados">ALT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="alerg__plato">Pollo</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Pollo y Pimientos</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Lomo</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Lomo y Pimientos</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Bacon y Queso</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Carne Guisada</td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Chicotín</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Escalopines de Jamón de Cerdo</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Escalopines de Pollo</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SÁNDWICHES -->
+        <div class="alerg__panel" id="alergp-sandwiches">
+          <div class="alerg__wrap">
+            <table class="alerg__table">
+              <thead>
+                <tr>
+                  <th class="alerg__th-plato">Plato</th>
+                  <th title="Cereales con gluten">GLU</th><th title="Lácteos y derivados">LÁC</th><th title="Huevos y derivados">HUE</th><th title="Pescado y derivados">PES</th><th title="Moluscos y derivados">MOL</th><th title="Crustáceos y derivados">CRU</th><th title="Soja y derivados">SOJ</th><th title="Mostaza y derivados">MOS</th><th title="Granos de sésamo">SÉS</th><th title="Frutos de cáscara">FRU</th><th title="Cacahuetes y derivados">CAC</th><th title="Apio y derivados">API</th><th title="Sulfitos y dióxido de azufre">SUL</th><th title="Altramuces y derivados">ALT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="alerg__plato">Mixto</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Vegetal</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Pollo</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Atún</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Chicotín</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ESPECIALIDADES -->
+        <div class="alerg__panel" id="alergp-especialidades">
+          <div class="alerg__wrap">
+            <table class="alerg__table">
+              <thead>
+                <tr>
+                  <th class="alerg__th-plato">Plato</th>
+                  <th title="Cereales con gluten">GLU</th><th title="Lácteos y derivados">LÁC</th><th title="Huevos y derivados">HUE</th><th title="Pescado y derivados">PES</th><th title="Moluscos y derivados">MOL</th><th title="Crustáceos y derivados">CRU</th><th title="Soja y derivados">SOJ</th><th title="Mostaza y derivados">MOS</th><th title="Granos de sésamo">SÉS</th><th title="Frutos de cáscara">FRU</th><th title="Cacahuetes y derivados">CAC</th><th title="Apio y derivados">API</th><th title="Sulfitos y dióxido de azufre">SUL</th><th title="Altramuces y derivados">ALT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="alerg__plato">Ensalada Chicotín</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Ensalada Mixta</td><td><span class="alerg__tr">Tr</span></td><td></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Ensalada de Acompañamiento</td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Ensaladilla Rusa</td><td><span class="alerg__tr">Tr</span></td><td></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Callos Chicotín <span class="carta__tag">Temporada</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Lasaña de Carne</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Lasaña de Atún</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Lasaña de Salmón y Espinacas</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Cachopo de Jamón Ibérico y Queso</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Cachopo de Cecina y Queso de Cabra</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Cachopo Chicotín</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Escalopines con Patatas</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Escalopines de Pollo con Patatas</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Albóndigas</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Carne Guisada</td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Patatas Pequeñas con Salsa</td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Patatas Grandes con 5 Salsas</td><td><span class="alerg__tr">Tr</span></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td><td></td><td></td><td></td><td><span class="alerg__tr">Tr</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Nuggets Caseros</td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Croquetas de Jamón Ibérico</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Croquetas de Calamar en su Tinta</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Croquetas de Bacalao</td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr class="alerg__row--encargo"><td class="alerg__plato">Tortilla Grande <span class="carta__tag">Encargo</span></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Empanada de Atún <span class="carta__tag">Encargo</span></td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+                <tr><td class="alerg__plato">Empanada de Carne <span class="carta__tag">Encargo</span></td><td><span class="alerg__x">X</span></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- POSTRES -->
+        <div class="alerg__panel" id="alergp-postres">
+          <div class="alerg__wrap">
+            <table class="alerg__table">
+              <thead>
+                <tr>
+                  <th class="alerg__th-plato">Plato</th>
+                  <th title="Cereales con gluten">GLU</th><th title="Lácteos y derivados">LÁC</th><th title="Huevos y derivados">HUE</th><th title="Pescado y derivados">PES</th><th title="Moluscos y derivados">MOL</th><th title="Crustáceos y derivados">CRU</th><th title="Soja y derivados">SOJ</th><th title="Mostaza y derivados">MOS</th><th title="Granos de sésamo">SÉS</th><th title="Frutos de cáscara">FRU</th><th title="Cacahuetes y derivados">CAC</th><th title="Apio y derivados">API</th><th title="Sulfitos y dióxido de azufre">SUL</th><th title="Altramuces y derivados">ALT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="alerg__plato">Mousse individual</td><td></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Natillas individuales</td><td></td><td><span class="alerg__x">X</span></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td class="alerg__plato">Arroz con Leche individual</td><td></td><td><span class="alerg__x">X</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- LEYENDA -->
+        <div class="alerg__leyenda fade-up">
+          <div class="alerg__leyenda-legend">
+            <span><span class="alerg__x">X</span> Contiene el alérgeno</span>
+            <span><span class="alerg__tr">Tr</span> Posibles trazas</span>
+          </div>
+          <dl class="alerg__codes">
+            <div><dt>GLU</dt><dd>Cereales con gluten</dd></div>
+            <div><dt>LÁC</dt><dd>Lácteos y derivados</dd></div>
+            <div><dt>HUE</dt><dd>Huevos y derivados</dd></div>
+            <div><dt>PES</dt><dd>Pescado y derivados</dd></div>
+            <div><dt>MOL</dt><dd>Moluscos y derivados</dd></div>
+            <div><dt>CRU</dt><dd>Crustáceos y derivados</dd></div>
+            <div><dt>SOJ</dt><dd>Soja y derivados</dd></div>
+            <div><dt>MOS</dt><dd>Mostaza y derivados</dd></div>
+            <div><dt>SÉS</dt><dd>Granos de sésamo</dd></div>
+            <div><dt>FRU</dt><dd>Frutos de cáscara</dd></div>
+            <div><dt>CAC</dt><dd>Cacahuetes y derivados</dd></div>
+            <div><dt>API</dt><dd>Apio y derivados</dd></div>
+            <div><dt>SUL</dt><dd>Sulfitos y dióxido de azufre</dd></div>
+            <div><dt>ALT</dt><dd>Altramuces y derivados</dd></div>
+          </dl>
+        </div>
+
+        <!-- NOTA CONTAMINACIÓN CRUZADA -->
+        <div class="alerg__nota fade-up">
+          <p><strong>Contaminación cruzada:</strong> En Chicotín elaboramos de forma artesanal platos que contienen harinas, panes, lácteos y pescados en el mismo obrador. A pesar de seguir estrictos protocolos de limpieza y desinfección entre elaboraciones, no es posible garantizar la ausencia total de trazas por contaminación cruzada aérea o por superficies compartidas (aceites de fritura, utillaje). Si padeces una alergia o intolerancia severa, infórmalo antes de hacer tu pedido.</p>
+        </div>
+
+      </div>
+    </section>
+
     <div class="divider" aria-hidden="true">
       <span class="divider__line"></span>
       <svg class="divider__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 90" aria-hidden="true">
@@ -1231,6 +1429,7 @@
           <a href="#menu-dia">Menú del día</a>
           <a href="#carta">Carta</a>
           <a href="#nosotros">Nosotros</a>
+          <a href="#alergenos">Alérgenos</a>
           <a href="#contacto">Contacto</a>
         </nav>
         <div class="footer__contact">

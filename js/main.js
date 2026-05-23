@@ -61,6 +61,22 @@ cartaTabs.forEach(tab => {
 });
 
 // ----------------------------------------------------------
+// Alérgenos — tabs
+// ----------------------------------------------------------
+const alergTabs   = document.querySelectorAll('.alerg__tab');
+const alergPanels = document.querySelectorAll('.alerg__panel');
+
+alergTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    alergTabs.forEach(t   => t.classList.remove('is-active'));
+    alergPanels.forEach(p => p.classList.remove('is-active'));
+    tab.classList.add('is-active');
+    const panel = document.getElementById('alergp-' + tab.dataset.alerg);
+    if (panel) panel.classList.add('is-active');
+  });
+});
+
+// ----------------------------------------------------------
 // Sticky navigation
 // ----------------------------------------------------------
 const nav = document.getElementById('nav');
